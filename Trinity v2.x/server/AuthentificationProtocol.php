@@ -5,6 +5,9 @@ include_once 'StreamMgr.php';
 
 class RAS_AuthentificationProtocol {
 
+	private $db;
+    private $key;
+	
 	const AuthStatus_Banned = 1 << 29;
 	const AuthStatus_Vulcain = 1 << 17;
 	const AuthStatus_Phantom = 1 << 16;
