@@ -298,7 +298,7 @@ function addLog($data) {
 	file_put_contents(getcwd()."/log_server", date('d/m/Y H:i:s')." ".$data, FILE_APPEND);
 }
 
-function hex_dump($string, array $options = null) {
+function hex_dump($string, ?array $options = null) {
     if (!is_scalar($string)) {
         throw new InvalidArgumentException('$string argument must be a string');
     }
