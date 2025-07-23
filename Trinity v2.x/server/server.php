@@ -72,6 +72,8 @@ if(socket_bind($server, "0.0.0.0", 50058) === false) {
 	$out->Error("socket_bind: ".socket_strerror(socket_last_error($server)));
 	socket_close($server);
 	exit(0x01);
+} else {
+	addLog("Server started on port 50058!"); // LOG
 }
 
 /* Accept up to 2bl connections simultaneously */
